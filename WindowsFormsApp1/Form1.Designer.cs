@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Load_data = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,16 +53,17 @@
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(678, 232);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Load_data
+            // Update
             // 
-            this.Load_data.Location = new System.Drawing.Point(12, 176);
-            this.Load_data.Name = "Load_data";
-            this.Load_data.Size = new System.Drawing.Size(121, 52);
-            this.Load_data.TabIndex = 1;
-            this.Load_data.Text = "Update";
-            this.Load_data.UseVisualStyleBackColor = true;
-            this.Load_data.Click += new System.EventHandler(this.Load_data_Click);
+            this.Update.Location = new System.Drawing.Point(12, 176);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(121, 52);
+            this.Update.TabIndex = 1;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // textBox2
             // 
@@ -146,6 +147,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -155,6 +157,7 @@
             this.button3.TabIndex = 14;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox1
             // 
@@ -184,7 +187,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.Load_data);
+            this.Controls.Add(this.Update);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -197,7 +200,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Load_data;
+        private System.Windows.Forms.Button Update;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
